@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryppt / Decrypt</title>
+    <style>
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1{
+            font-size: 3em;
+            margin: 2em 0;
+        }
+        form{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 150px 150px;
+            gap: 2em;
+            font-size: 2em;
+            > label {
+                width: 100%;
+                > input {
+                    width: 70%;
+                    font-size: 1em;
+                    padding: .25em .5em;
+                    outline: none;
+                    border-style: solid;
+                }
+                > input:focus{
+                    border-color:white ;
+                    border-bottom-color: brown;
+                }
+            }
+            > button{
+                font-size: 1em;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encryppt / Decrypt</h1>
+        <form action="">
+            <label>
+                Your Value:
+                <input type="text" id="code">
+            </label>
+            <button type="button" id="encode">Encode</button>
+            <button type="button" id="decode">Decode</button>
+        </form>
+        <h2 id="display">Here you can see your result!</h2>
+    </div>
+    <script src="hash.js"></script>
+</body>
+</html>
