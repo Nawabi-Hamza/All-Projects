@@ -1,0 +1,113 @@
+/* Add this to your CSS */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: #fff;
+}
+
+.container{
+    max-width: 800px;
+    margin: auto;
+    padding: 1em;
+}
+.btn{
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 1em 1.5em;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #8f8f8f;
+}
+.btn.btn-dark:disabled{
+    background-color: black;
+    color: white;
+}
+
+
+.guess-game .header{
+    display: flex;
+    justify-content: space-between;
+    > p{
+        font-size: 12px;
+    }
+}
+.guess-game .main > h1{
+    text-align: center;
+    margin: 2em auto;
+}
+.guess-game .main .divider{
+    text-align: center;
+    position: relative;
+    > hr{
+        margin: 8em auto
+    };
+    > button{
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        font-size: 2em;
+    }
+}
+.guess-game .main .guess-info{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    justify-content: space-around;
+    
+    > .inputs{
+        text-align: center;
+        margin-right: 3em;
+        
+        > input{
+            font-size: 2em;
+            width: 100%;
+            padding:1em;
+            text-align: center;
+        }
+        > button{
+            margin-top: 2em;
+            font-size: 1em;
+        }
+    }
+    > div ul li{
+        list-style: none;
+        margin-bottom: 1.5em;
+    }
+    > div ul li:first-child{
+        margin-bottom: 4em;
+    }
+}
+
+@media screen and (max-width:650px) {
+    
+.guess-game .main > h1{
+    font-size: 1.2em;
+}
+.btn{
+    font-size: .7em ;
+}
+.guess-game .main .guess-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3em;
+    
+    > .inputs{
+        margin-right: 0;
+        > input{
+            font-size: 1em;
+        }
+        > button{
+            font-size: .8em;
+        }
+    }
+}
+    
+}

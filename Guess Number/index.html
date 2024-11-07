@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guess My Number</title>
+</head>
+<body>
+
+    <div class="container guess-game">
+        <div class="header">
+            <button type="button" class="btn" onclick="tryAgain()">Again!</button>
+            <p>&lt;Between 1 and 20&gt;</p>
+        </div>
+        <div class="main">
+            <h1>Guess My Number</h1>
+            <div class="divider">
+                <hr>
+                <button type="button" id="btn-question-mark" class="btn" disabled>?</button>
+            </div>
+            <div class="guess-info">
+                <div class="inputs">
+                    <input type="number" id="guess" max="20" min="0" maxlength="2" required>
+                    <button type="submit" id="checkBtn" class="btn btn-dark" onclick="btnClick()">Check</button>
+                </div>
+                <div>
+                    <ul>
+                        <li id="message">Start guessing...</li>
+                        <li>💯 Score: <span id="score">0</span></li>
+                        <li>🥇 Highscore: <span id="highscore">0</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

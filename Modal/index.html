@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #333;
+            background-color: teal;
+        }
+        .container{
+            max-width: 1000px;
+            margin: auto;
+        }
+        #modal-btn{
+            font-size: 1.4em;
+            padding: .25em 1em;
+            cursor: pointer;
+            border: 1px solid #eee;
+            background-color: rgb(0, 128, 128);
+            color: #eee;
+            border-radius: .25em;
+        }
+        #modal-btn:hover{
+            background-color: rgb(1, 96, 96);
+        }
+        #modal{
+            display: none;
+        }
+        .modal{
+            display: flex !important;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom:0;
+            justify-content: center;
+            align-items: center;
+        }
+        #modal-body{
+            background-color: #eee;
+            padding: 1em;
+            box-sizing: border-box;
+            width: 600px;
+            border-radius: .5em;
+            > h1{
+                font-size: 3em;
+            }
+            > p{
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="modal-btn">First Modal</button>
+        <div id="modal">
+            <div id="modal-body">
+                <h1>My Modal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est error atque placeat maiores corrupti, alias labore, repellendus delectus suscipit quaerat perferendis saepe similique perspiciatis qui quisquam dolore hic voluptatum magnam.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
